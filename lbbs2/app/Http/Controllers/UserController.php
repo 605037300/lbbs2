@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use App\Handlers\UploadImageHandler;
-
+use Illuminate\Support\Facades\Gate;
 class UserController extends Controller
 {
     public function __construct(){
@@ -25,6 +25,8 @@ class UserController extends Controller
     }
 
     public  function  update(UserRequest $request,UploadImageHandler $upload,User $user){
+       
+        // dd(class_basename('App\Http\Controllers'));
         // dd($request->avator);
         // dd(\Str::random(10));
         // dd(public_path());
