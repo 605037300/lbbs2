@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\Topic;
 use App\Models\User;
+use App\Models\Category;
 
 class TopicsTableSeeder extends Seeder
 {
@@ -11,7 +12,7 @@ class TopicsTableSeeder extends Seeder
     {
         $users_id=User::all()->pluck('id')->toArray();
 
-        $categories_id=User::all()->pluck('id')->toArray();
+        $categories_id=Category::all()->pluck('id')->toArray();
 
         $faker=app(Faker\Generator::class);
 
