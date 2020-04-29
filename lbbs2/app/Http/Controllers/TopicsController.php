@@ -14,10 +14,11 @@ class TopicsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index()
+	public function index(Request $request)
 	{
-		
-		$topics = Topic::with('user','category')->paginate();
+		// $topics=$topic->withOrder($request->order)->with('user','category')->paginate(20);
+
+		$topics = Topic::withOrder($request->order)->with('user','category')->paginate();
 		//分页之后$topics对象会携带分页参数
 		// dd($topics);
 		return view('topics.index', compact('topics'));
