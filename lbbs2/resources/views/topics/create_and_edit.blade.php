@@ -66,9 +66,9 @@
                
                 <div class="form-group">
                   <select name="category_id" class='form-control' required>
-                      <option value="" hidden selected disabled>请选择分类</option>
+                      <option value="" hidden  disabled {{$topic->id?'':'selected'}}>请选择分类</option>
                     @foreach($category as $item)
-                      <option value="{{$item->id}}">{{$item->name}}</option>
+                      <option value="{{$item->id}}" {{$topic->category_id==$item->id?'selected':''}}>{{$item->name}}</option>
                     @endforeach
                   </select>
                 </div> 
