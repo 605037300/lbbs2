@@ -12,7 +12,7 @@
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
-
+@import "topic_body";
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
@@ -101,4 +101,8 @@ body {
 
 #app > div.container {
   margin-bottom: 100px;
+}
+
+.simditor-body img {
+  max-width:100%;
 }
